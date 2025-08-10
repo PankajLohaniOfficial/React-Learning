@@ -1,6 +1,6 @@
 import styles from "./Item.module.css";
 
-const Item = ({ foodItem }) => {
+const Item = ({ foodItem, handleBuyButton }) => {
   return (
     <li className="list-group-item">
       {foodItem}
@@ -8,9 +8,8 @@ const Item = ({ foodItem }) => {
       {/* $ sign hamara hamara variable banaane ke liye use hota hai */}
       <button
         className={`${styles.button} btn btn-info `}
-        onClick={() => console.log(`${foodItem} being bought..`)}
+        onClick={handleBuyButton}
       >
-        {" "}
         Buy
       </button>
     </li>
